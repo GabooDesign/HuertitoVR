@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Tour 360 Metro</title>
+  <title>Tour 360 Huertito FAU</title>
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
 </head>
 
@@ -84,7 +84,7 @@
 
 <script>
 
-let currentScene = "#escena1";
+let currentScene = "#start";
 
 function fadeIn(callback) {
   const fade = document.querySelector('#fade');
@@ -132,7 +132,7 @@ function goBack() {
   fadeIn(() => {
 
     const sky = document.querySelector('#sky');
-    sky.setAttribute('src', '#escena1');
+    sky.setAttribute('src', '#start');
 
     document.querySelectorAll('.clickable').forEach(el => {
       if (el.id !== "btnBack") {
@@ -142,7 +142,7 @@ function goBack() {
 
     document.querySelector('#btnBack').setAttribute('visible', false);
 
-    currentScene = "#escena1";
+    currentScene = "#start";
 
     fadeOut();
   });
